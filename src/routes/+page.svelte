@@ -1,5 +1,11 @@
 <script lang="ts">
-	import { MapLibre, NavigationControl, ScaleControl, GlobeControl } from 'svelte-maplibre-gl';
+	import {
+		MapLibre,
+		Marker,
+		NavigationControl,
+		ScaleControl,
+		GlobeControl
+	} from 'svelte-maplibre-gl';
 </script>
 
 <MapLibre
@@ -11,4 +17,6 @@
 	<NavigationControl />
 	<ScaleControl />
 	<GlobeControl />
+
+	<Marker lnglat={[141.350714, 43.068564]} />
 </MapLibre>
