@@ -6,6 +6,8 @@
 		ScaleControl,
 		GlobeControl
 	} from 'svelte-maplibre-gl';
+
+	let lnglat: [number, number] = [141.350714, 43.068564];
 </script>
 
 <MapLibre
@@ -18,5 +20,14 @@
 	<ScaleControl />
 	<GlobeControl />
 
-	<Marker lnglat={[141.350714, 43.068564]} />
+	<Marker bind:lnglat draggable />
 </MapLibre>
+
+<p>
+	Longitude:
+	<input type="number" bind:value={lnglat[0]} />
+</p>
+<p>
+	Latitude:
+	<input type="number" bind:value={lnglat[1]} />
+</p>
