@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import { MapLibre, NavigationControl, ScaleControl, GlobeControl } from 'svelte-maplibre-gl';
+</script>
+
+<MapLibre
+	class="h-[55vh] min-h-[300px]"
+	style="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
+	zoom={3.5}
+	center={{ lng: 137, lat: 36 }}
+>
+	<NavigationControl />
+	<ScaleControl />
+	<GlobeControl />
+</MapLibre>
